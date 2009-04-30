@@ -1,0 +1,9 @@
+site_name : Events Application
+site_description : Here's what's happening now!
+site_footer : Copyright 2009.
+
+google_analytics_id : UA-XXXXXXX-X
+
+perform_authentication: false
+username: admin
+password: secret

@@ -1,0 +1,27 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+	<% if @meta_description %><meta name="description" content="<%= h @meta_description %>" /><% end %>
+	<title><%= get_page_title %></title>
+	<% if @canonical_link %><link rel="canonical" href="<%= @canonical_link %>" /><% end %>
+	<%= stylesheet_link_tag "main", :media => "all" %><%= get_dependencies %>
+</head>
+<body>
+	<div id="corset">
+			<%= link_to image_tag("layout/header.png", :alt => APP_CONFIG['site_name']), "/", :id => :header, :width => 819, :height => 111 %>
+		<div id="content_envelope">
+			<div id="content">
+				<%= flashes %>
+				<%= yield %>
+			</div>
+		</div>
+		<div id="footer">
+		</div>
+		<div id="about" class="clearfix">
+			<span class="left"><%= APP_CONFIG['site_footer'] %></span><span class="right">created by <%= link_to "wil gieseler", "http://wil.gieseler.org/" %></strong></span>
+		</div>
+	</div>
+<%= render :partial => "admin/analytics" if APP_CONFIG['google_analytics_id'] %>
+</body>
+</html>

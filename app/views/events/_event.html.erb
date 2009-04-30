@@ -1,0 +1,12 @@
+<div class="big_event clearfix">
+	<div class="left">
+		<span class="date"><%= readable_time(event.start_date) %></span><br />
+		<span class="location"><%=h event.location %></span>
+	</div>
+	<div class="right">
+		<%= link_to h(event.name), event, :class => "title" %>
+		<div class="summary"><%=h event.summary %></div>
+		<div class="more"><%= link_to "More Info...", event %></div>
+	</div>
+	<% if event.image.file? %><div class="image"><%= link_to image_tag(event.image.url(:thumb)), event %></div><% end %>
+</div>

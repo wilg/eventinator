@@ -1,0 +1,9 @@
+<%= render :partial => "welcome" %>
+<% admin_area do %>
+	<%= link_to "Log Out", :action => :logout, :controller => :admin %>
+<% end %>
+<% @event_days.sort.each do |day, events| %>
+	<h2 class="day"><%= pretty_day day %></h2>
+	<%= render :partial => events %>
+<% end %>
+<%= will_paginate :previous_label => "&larr; Current Events", :next_label => "Future Events &rarr;" %>

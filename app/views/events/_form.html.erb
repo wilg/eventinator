@@ -1,0 +1,55 @@
+<% form_for @event, :html => {:multipart => true} do |f| %>
+<%= f.error_messages %>
+<%= hidden_field_tag(:secret, params[:secret]) if params[:secret] %>
+<div class="show_page clearfix">
+	<div class="left">
+		<%= f.label :name, "Event Name" %>
+		<div class="wrapped_field large">
+			<%= f.text_field :name %>
+		</div>
+		<%= f.label :summary, "Summary (140 characters or less)" %>
+		<div class="wrapped_field">
+			<%= f.text_field :summary, :maxlength => 140, :size => 30 %>
+		</div>
+		<%= f.label :sponsor, "Sponsoring Organization (if any)" %>
+		<div class="wrapped_field">
+			<%= f.text_field :sponsor %>
+		</div>
+		<%= f.label :start_date, "Time" %>
+		<div>
+			<% dependencies :css => "calendar_date_select/shiny.css", :js => [:prototype, "calendar_date_select/calendar_date_select.js"] %>
+			<%= calendar_date_select_tag "event[start_date]", @event.start_date, :embedded => true, :time => true, :year_range => [1.years.ago, 2.years.from_now]  %>
+		</div>
+	</div>
+	<div class="right">
+		<div class="metadata">
+			<%= f.label :image %>
+			<div class="image">
+			<% if @event.image.file? %><%= image_tag(@event.image.url) %><% end %>
+			<%= f.file_field :image %>
+			</div>
+			<%= f.label :location %>
+			<div class="location">
+			<%= f.text_field :location %>
+			</div>
+			<%= f.label :url, "website" %>
+			<div class="web">
+			<%= f.text_field :url %>
+			</div>
+			<%= f.label :email %>
+			<div class="email">
+			<%= f.text_field :email %>
+			</div>
+			<%= f.label :phone %>
+			<div class="phone">
+			<%= f.text_field :phone %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="description">
+	<%= f.label :description %>
+	<div><%= f.text_area :description %></div>
+</div>
+<p><%= f.submit "Submit" %></p>
+<% end %>

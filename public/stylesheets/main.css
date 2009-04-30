@@ -1,0 +1,446 @@
+/* @override http://chapmanevents.local/stylesheets/main.css */
+
+/* @group Layout */
+
+body {
+	font-family: "Helvetica Neue", Helvetica, Geneva, sans-serif;
+	margin: 0;
+	background: #323840 url(/images/layout/body_grad.png) repeat-x;
+}
+
+#corset {
+	margin: 10px auto 0;
+	width: 819px;
+}
+
+a:link, a:visited {
+	color: #7e0808;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:active {
+	color: #b2a120;
+}
+
+#content_envelope {
+	background-image: url(/images/layout/shadow.png);
+	padding: 0 10px;
+}
+
+#content {
+	background-color: white;
+	padding: 15px 15px 1px;
+}
+
+#footer {
+	background-image: url(/images/layout/footer.png);
+	height: 23px;
+}
+
+#about a:link, #about a:visited {
+	color: #7e7e7e;
+}
+
+#about {
+	text-align: left;
+	padding-left: 20px;
+	padding-right: 20px;
+	font-size: 14px;
+	color: #7e7e7e;
+	margin-bottom: 20px;
+}
+
+#about .right {
+	float: right;
+	font-size: 16px;
+}
+
+#about .left {
+	float: left;
+	font-size: 10px;
+	margin-top: 3px;
+}
+
+#header {
+	display: block;
+}
+
+h2 {
+	margin: 0;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 21px;
+}
+
+h1 {
+	margin: 0 0 15px;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 28px;
+	border-bottom: 1px solid #eee;
+}
+
+.admin {
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	padding: 10px;
+	border: 1px solid #ccab2a;
+	background: #f0e37e url(/images/sheen.png) repeat-x 0 center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+div.flash {
+	text-align: center;
+	padding: 15px 10px;
+	background-color: #afbfeb;
+	color: #213465;
+	margin: 0 auto 15px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+}
+
+div.flash.notice {
+	background-color: #e3f6cf;
+	color: #3d5c1e;
+}
+
+div.flash.warning {
+	background-color: #ffd4ce;
+	color: #71350d;
+}
+
+/* @end */
+
+/* @group Buttons */
+
+a.big_button, input[type=submit] {
+	border-radius: 4px;
+	display: block;
+	color: white;
+	background: #1764d1 url(/images/sheen.png) repeat-x 0 center;
+	padding: 10px 20px;
+	text-shadow: rgba(0,0,0,0.26) 1px 1px 0;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #145bc0;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	font: 16px "Arial Rounded MT Bold";
+	cursor: pointer;
+}
+
+a.big_button:hover, input[type=submit]:hover {
+	text-decoration: none;
+	background-color: #387ad7;
+}
+
+a.big_button:active, input[type=submit]:active {
+	background-color: #9b2d19;
+	border-color: #7b2413;
+}
+
+/* @end */
+
+/* @group Welcome */
+
+#welcome .big_button {
+	float: right;
+}
+
+#welcome h2 {
+	margin-top: 8px;
+}
+
+#welcome {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	background-color: #eee;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+}
+
+/* @end */
+
+/* @group Item Page */
+
+.show_page .left {
+	float: left;
+	width: 455px;
+}
+
+.show_page .right {
+	float: right;
+}
+
+.show_page h1 {
+	margin-bottom: 5px;
+	border: none;
+}
+
+.show_page h2 {
+	font-size: 21px;
+	color: #39920c;
+	margin-bottom: 2px;
+}
+
+.show_page h3 {
+	font: italic 18px Georgia, "Times New Roman", Times, serif;
+	border-bottom: 1px solid #eee;
+	margin-top: 0;
+	margin-left: 0;
+	margin-right: 0;
+	padding-bottom: 3px;
+}
+
+.show_page .metadata {
+	width: 300px;
+}
+
+.show_page .metadata div {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 14px;
+	padding: 6px 6px 6px 35px;
+	background: #eee no-repeat 8px center;
+}
+
+.show_page .metadata.edit div {
+	padding: 6px;
+}
+
+.metadata div.location {
+	background-image: url(/images/icons/locate.png);
+}
+
+.metadata div.image {
+	padding: 6px;
+	text-align: left;
+}
+
+.right a.image {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.metadata div.image img {
+	max-width: 100%;
+	margin-bottom: 10px;
+}
+
+.metadata div.web {
+	background-image: url(/images/icons/web.png);
+}
+
+.metadata div.email {
+	background-image: url(/images/icons/email.png);
+}
+
+.metadata div.phone {
+	background-image: url(/images/icons/phone.png);
+}
+
+/* @end */
+
+/* @group Main Page */
+
+h2.day {
+		border-radius: 4px;
+	display: block;
+	color: white;
+	background: #820a0a url(/images/sheen.png) repeat-x 0 center;
+	text-shadow: rgba(0,0,0,0.26) 1px 1px 0;
+	text-align: left;
+	border: 1px solid #5f0002;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	font: 16px "Arial Rounded MT Bold";
+	margin: 20px auto 10px;
+	padding: 5px;
+}
+
+.big_event {
+	/*background-color: #eee;
+	border: 1px solid #ccc;*/
+	padding: 5px;
+	margin-bottom: 10px;
+}
+
+.big_event .left {
+	float: left;
+	width: 200px;
+	text-align: right;
+}
+
+.big_event .right {
+	float: left;
+	width: 420px;
+	text-align: left;
+	margin-left: 13px;
+	border-left: 1px solid #ccc;
+	padding-left: 10px;
+}
+
+.big_event .date {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.big_event .title {
+	font-size: 23px;
+}
+
+.big_event .subtitle {
+	font-size: 16px;
+	float: left;
+	margin-top: 4px;
+	text-align: right;
+}
+
+.big_event .image {
+	float: right;
+	margin-left: 15px;
+}
+
+.big_event .more {
+	padding-top: 5px;
+	font-size: 14px;
+}
+
+/* @end */
+
+/* @group CSS Fixes */
+
+img {
+	vertical-align: bottom;
+}
+
+a img {
+	border: none;
+}
+
+a {
+	outline: none;
+}
+
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+
+.clearfix {
+	display: inline-block;
+}
+
+html[xmlns] .clearfix {
+	display: block;
+}
+
+* html .clearfix {
+	height: 1%;
+}
+
+/*
+
+ @end */
+
+/* @group Forms */
+
+form {
+	
+}
+
+form input[type=text], textarea {
+	border: 1px solid #ccc;
+	padding: 5px;
+	font-size: 14px;
+	font-family: "Helvetica Neue", Helvetica, Geneva, sans-serif;
+	outline: none;
+}
+
+form input[type=text]:focus {
+	border-color: #1764d1;
+}
+
+label {
+	text-transform: lowercase;
+	color: #767676;
+	margin-bottom: 2px;
+	display: block;
+	margin-left: 6px;
+	font: 14px "Arial Rounded MT Bold";
+}
+
+.left label {
+	margin: 0 0 1px;
+}
+
+.wrapped_field {
+	margin-bottom: 10px;
+}
+
+.wrapped_field input {
+	width: 430px;
+}
+
+.wrapped_field.large input {
+	font-size: 21px;
+}
+
+.description {
+	width: 614px;
+	margin: 20px auto;
+}
+
+.description textarea {
+	width: 588px;
+}
+
+/* @end */
+
+/* @group Pagination */
+
+.pagination {
+	text-align: center;
+	padding: 1em;
+}
+
+.pagination a, .pagination span {
+	padding: .2em .3em;
+}
+
+.pagination span.disabled {
+	display: none;
+}
+
+.pagination span.current {
+	font-weight: bold;
+	background: #9f1f1f url(/images/pagination_circle.gif) no-repeat 50% 50%;
+	color: white;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+/* @end */
+
+.footer_bar {
+	width: 90%;
+	margin: 10px auto 0;
+	border-top: 1px solid #ccc;
+	padding: 10px;
+	padding-bottom: 10px;
+}

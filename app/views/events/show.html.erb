@@ -1,0 +1,29 @@
+<div class="show_page clearfix">
+	<div class="left">
+		<h2><%= readable_date(@event.start_date, true) %></h2>
+		<%= title h(@event.name) %><% dependencies :js => ["FancyZoom", "FancyZoomHTML"]%>
+		<% if @event.sponsor %><h3><%=h @event.sponsor %></h3><% end %>
+		<div class="description_show">
+			<%= simple_format @event.description %>
+		</div>
+	</div>
+	<div class="right">
+		<% if @event.image.file? %><%= link_to image_tag(@event.image.url), @event.image.url(:large), :class => :image %><% end %>
+		<div class="metadata">
+			<% unless @event.location.blank? %><div class="location"><%= h @event.location %></div><% end %>
+			<% unless @event.url.blank? %><div class="web"><%= link_to pretty_url(@event.url), @event.url %></div><% end %>
+			<% unless @event.email.blank? %><div class="email"><%= link_to @event.email, "mailto:" + @event.email %></div><% end %>
+			<% unless @event.phone.blank? %><div class="phone"><%=h @event.phone %></div><% end %>
+		</div>
+	</div>
+</div>
+
+<% admin_area do %>
+	<%= link_to "Edit", legit_edit_link(@event) %> -
+	<%= link_to "Destroy", @event, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+<% footer_area do %>
+	<%= link_to "&larr; All Events", root_path %>
+<% end %>
+<script type="text/javascript">setupZoom();</script>

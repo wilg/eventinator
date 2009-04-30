@@ -1,0 +1,10 @@
+log/*.log
+tmp/**/*
+doc/api
+doc/app
+doc/plugins
+public/system/uploads/*
+.DS_Store
+config/database.yml
+db/*.sqlite3
+config/eventinator.yml

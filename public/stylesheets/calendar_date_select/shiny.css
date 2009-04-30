@@ -1,0 +1,201 @@
+/* @override http://chapmanevents.local/stylesheets/calendar_date_select/shiny.css */
+
+/* @group Original Styles */
+
+.calendar_date_select {
+	color: white;
+  display: block;
+	width: 250px;
+	z-index: 1000;
+}
+
+/* this is a fun ie6 hack to get drop downs to stay behind the popup window.  This should always be just underneath .calendar_date_select */
+
+iframe.ie6_blocker {
+	position: absolute;
+	z-index: 999;
+}
+
+.calendar_date_select thead th {
+	border-top: 1px solid #7c181a;
+	border-bottom: 1px solid #7c181a;
+	color: white !important;
+	background: #931d1d url(/images/sheen.png) 0 center;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	font: bold 14px "Arial Rounded MT Bold";
+	text-shadow: rgba(0,0,0,0.26) 1px 1px 2px;
+}
+
+.calendar_date_select .cds_buttons {
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomright: 5px;
+	background: #eee no-repeat 8px center;
+	border: 1px solid #ccc;
+	padding: 5px;
+	text-align: center;
+	border-top-style: none;
+	color: black;
+}
+
+.calendar_date_select .cds_footer {
+	-webkit-border-radius: 8px;
+	-moz-border-radius: 8px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: 16px;
+	padding: 6px;
+	background: #eee no-repeat 8px center;
+	color: black;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.calendar_date_select table {
+	margin: 0px;
+	padding: 0px;
+	font-size: 14px;
+}
+
+.calendar_date_select .cds_header {
+	-webkit-border-top-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topright: 5px;
+	background: #eee no-repeat 8px center;
+	border: 1px solid #ccc;
+	padding: 5px;
+	text-align: center;
+	border-bottom-style: none;
+}
+
+.calendar_date_select .cds_header span {
+	font-size: 15px;
+	color: black;
+	font-weight: bold;
+}
+
+.calendar_date_select select {
+	font-size: 11px;
+	margin-right: 2px;
+	margin-left: 2px;
+}
+
+.calendar_date_select .cds_header a:hover {
+	color: white;
+}
+
+.calendar_date_select .cds_header a {
+	text-decoration: none;
+	font-size: 14px;
+	color: white !important;
+	font-weight: bold;
+	background: #77a04d url(/images/sheen.png) 0 center;
+	font: bold 14px "Arial Rounded MT Bold";
+	padding: 3px 10px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	text-shadow: rgba(0,0,0,0.26) 1px 1px 2px;
+}
+
+.calendar_date_select .cds_header a.prev {
+	float: left;
+}
+
+.calendar_date_select .cds_header a.next {
+	float: right;
+}
+
+.calendar_date_select .cds_header a.close {
+	float: right;
+	display: none;
+}
+
+.calendar_date_select .cds_header select.month {
+	width: 90px;
+}
+
+.calendar_date_select .cds_header select.year {
+	width: 61px;
+}
+
+.calendar_date_select .cds_buttons a {
+	color: #62b40d;
+	text-transform: lowercase;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.calendar_date_select td {
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	background-color: #fff;
+	height: 30px;
+	width: 30px;
+}
+
+.calendar_date_select td.weekend {
+	background-color: #eee;
+	border-left: 1px solid #ddd;
+	border-right: 1px solid #ddd;
+}
+
+.calendar_date_select td div {
+	color: #000;
+}
+
+.calendar_date_select td div.other {
+	color: #ccc;
+}
+
+.calendar_date_select td.selected div {
+	color: white;
+}
+
+
+.calendar_date_select tbody td {
+	border-bottom: 1px solid #ddd;
+}
+
+.calendar_date_select td.today {
+	background-color: #fff8c5;
+}
+
+.calendar_date_select td:hover {
+	background-color: #e6ebff;
+	color: black !important;
+}
+
+.calendar_date_select td.selected {
+	background: #1764d1 url(/images/sheen.png) 0 center;
+	font-weight: bold;
+	color: white;
+}
+
+.calendar_date_select td.disabled div {
+	color: #e6e6e6;
+}
+
+.fieldWithErrors .calendar_date_select {
+	border: 2px solid red;
+}
+
+/* @end */
+
+/* @group Additional Styles */
+
+.at_sign {
+	display: none;
+}
+
+.button_seperator {
+	color: #c1c1c1;
+	font-size: 12px;
+}
+
+/* @end */
