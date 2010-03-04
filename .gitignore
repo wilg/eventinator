@@ -8,3 +8,6 @@ public/system/uploads/*
 config/database.yml
 db/*.sqlite3
 config/eventinator.yml
+Capfile
+config/deploy.rb
+mkmf.log
