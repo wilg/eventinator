@@ -1,4 +1,4 @@
-Paperclip.options[:image_magick_path] = "/usr/local/bin"
+Paperclip.options[:image_magick_path] = APP_CONFIG['image_magick_path']
 class Event < ActiveRecord::Base
   
   default_scope :order => "start_date asc"
@@ -21,6 +21,10 @@ class Event < ActiveRecord::Base
   
   def secret_code
     Digest::MD5.hexdigest("#{self.created_at}-#{self.id}-thinga")
+  end
+  
+  def body
+    self.description.blank? ? self.summary : self.description
   end
   
 end

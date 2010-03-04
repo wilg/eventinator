@@ -5,10 +5,8 @@ class EventsController < ApplicationController
   def index
     params[:all] ? @events = Event.all : @events = Event.displayable.all
     @events = @events.paginate(:per_page => 30, :page => params[:page])
-
+    @events.delete_if {|event| event.start_date.nil? } 
     @event_days = @events.group_by { |event| event.start_date.beginning_of_day }
-    
-    
   end
   
   def show

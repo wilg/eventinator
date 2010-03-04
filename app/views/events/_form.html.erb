@@ -32,9 +32,17 @@
 			<div class="location">
 			<%= f.text_field :location %>
 			</div>
+			<%= f.label :fee, "fee (blank for free)" %>
+			<div class="fee">
+			<%= f.text_field :fee %>
+			</div>
 			<%= f.label :url, "website" %>
 			<div class="web">
 			<%= f.text_field :url %>
+			</div>
+			<%= f.label :facebook_url, "facebook event link" %>
+			<div class="facebook_event">
+			<%= f.text_field :facebook_url %>
 			</div>
 			<%= f.label :email %>
 			<div class="email">

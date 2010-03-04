@@ -30,12 +30,7 @@ module ApplicationHelper
     if !date || date.blank?
       return "Unknown"
     end
-    
-    string_date = date.strftime("%I:%M%p")
-    string_date.gsub!(/0(\d\D)/, ' \1') 
-    string_date.gsub!(/AM/, 'am')
-    string_date.gsub!(/PM/, 'pm') 
-    return string_date
+    date.to_datetime.strftime("%-I:%M%p").downcase
   end
   
   def pretty_day(date)

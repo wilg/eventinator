@@ -6,6 +6,8 @@
 	<title><%= get_page_title %></title>
 	<% if @canonical_link %><link rel="canonical" href="<%= @canonical_link %>" /><% end %>
 	<%= stylesheet_link_tag "main", :media => "all" %><%= get_dependencies %>
+	<!--[if lt IE 7]><%= stylesheet_link_tag "ie", :media => "all" %><![endif]-->
+	<!--[if lt IE 7]><%= javascript_include_tag "ie-png-fix" %><![endif]-->
 </head>
 <body>
 	<div id="corset">

@@ -4,17 +4,19 @@
 		<%= title h(@event.name) %><% dependencies :js => ["FancyZoom", "FancyZoomHTML"]%>
 		<% if @event.sponsor %><h3><%=h @event.sponsor %></h3><% end %>
 		<div class="description_show">
-			<%= simple_format @event.description %>
+			<%= simple_format @event.body %>
 		</div>
 	</div>
 	<div class="right">
 		<% if @event.image.file? %><%= link_to image_tag(@event.image.url), @event.image.url(:large), :class => :image %><% end %>
 		<div class="metadata">
 			<% unless @event.location.blank? %><div class="location"><%= h @event.location %></div><% end %>
+			<% unless @event.fee.blank? %><div class="fee"><%= fee_format @event.fee %></div><% end %>
 			<% unless @event.url.blank? %><div class="web"><%= link_to pretty_url(@event.url), @event.url %></div><% end %>
 			<% unless @event.email.blank? %><div class="email"><%= link_to @event.email, "mailto:" + @event.email %></div><% end %>
 			<% unless @event.phone.blank? %><div class="phone"><%=h @event.phone %></div><% end %>
 		</div>
+		<% unless @event.facebook_url.blank? %><div class="show facebook_url"><%= image_tag "icons/facebook_event.gif" %><%= link_to "View Event on Facebook", @event.facebook_url %></div><% end %>
 	</div>
 </div>
 
